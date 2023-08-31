@@ -4,7 +4,7 @@ This git repo have the same structure of our current FastAPI backend, just in a 
 
 Whenever I want to add a new file logger for specific module, I will go `backend/http/logger_setup.py` to update the `configure_logger` function (See "Reproduce the issues" below).
 
-Whenver we have code changes, after git pull the latest master branch, we will send a HUP signal to the Gunicorn master process to gracefully reload the server. This is just a small single line script and we wrote it in `Makefile`, under the `reload` section. So to reload Gunicorn, we can just do:
+Whenver the codebase changes(and tested), we will send a HUP signal to the Gunicorn master process to gracefully reload the server. This is just a small single line script and we wrote it in `Makefile`, under the `reload` section. So to reload Gunicorn, we can just do:
 
 ```bash
 make reload
